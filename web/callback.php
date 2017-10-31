@@ -19,7 +19,7 @@ if ($text == 'はい') {
     "altText" => "こちらの〇〇はいかがですか？",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "thumbnailImageUrl" => "https://www.cityheaven.net/kyoto/" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
       "title" => "○○レストラン",
       "text" => "お探しのレストランはこれですね",
       "actions" => [
