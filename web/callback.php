@@ -36,7 +36,7 @@ if ($text == 'はい') {
           [
             "type" => "uri",
             "label" => "詳しく見る",
-            "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+            "uri" => "https://www.cityheaven.net/kyoto/" . $_SERVER['SERVER_NAME'] . "/"
           ],
           [
             "type" => "message",
