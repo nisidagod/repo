@@ -1,22 +1,17 @@
 <?php
-$accessToken = getenv('xRqejpxMVQK8pUA17z8jMKKDaEKmis3XoYArpP+EkrUrhwO7RSb10BCo3IpfcAJoAAxqcvcwrHH0INAXfrMee0+OePxm2umiq+k4SdS05O3OcLW/FN4RLqhdrTQ6DC5XZvgn3UaUmMYqLUouPfvpUQdB04t89/1O/w1cDnyilFU=');
-
-
+$accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 //ユーザーからのメッセージ取得
 $json_string = file_get_contents('php://input');
 $jsonObj = json_decode($json_string);
-
 $type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
 //メッセージ取得
 $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 //ReplyToken取得
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
-
 //メッセージ以外のときは何も返さず終了
 if($type != "text"){
 	exit;
 }
-
 //返信データ作成
 if ($text == 'はい') {
   $response_format_text = [
@@ -151,12 +146,10 @@ if ($text == 'はい') {
     ]
   ];
 }
-
 $post_data = [
 	"replyToken" => $replyToken,
 	"messages" => [$response_format_text]
 	];
-
 $ch = curl_init("https://api.line.me/v2/bot/message/reply");
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
