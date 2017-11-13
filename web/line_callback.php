@@ -60,7 +60,7 @@ if (isset($_GET['code'])) {
     echo '<p>userId : ' . htmlspecialchars($profile["userId"], ENT_QUOTES) . '</p>';
 
     $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('CHANNEL_ACCESS_TOKEN'));
-    $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => getenv('CHANNEL_SECRET')]);
+    $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => getenv('329695d93f519ef5bdc856f2276c7b4d')]);
     $bot->pushMessage($profile["userId"], new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Logged in via LINE Login v2.'));
   }
 }
