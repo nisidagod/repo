@@ -4,9 +4,4 @@
     "repository": "https://github.com/nisidagod/repo.git",
     "logo": "https://bita.jp/dml/wp-content/uploads/2016/04/dijimalab_logo.png",
     "keywords": ["php", "line-messaging-api"],
-    "env": {
-      "LINE_CHANNEL_ACCESS_TOKEN": {
-        "description": "Channel Access Token (LINE developers の Basic information で確認できます)"
-      }
-    }
 }
