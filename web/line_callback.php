@@ -26,8 +26,8 @@ if (isset($_GET['code'])) {
   $url = 'https://api.line.me/v2/oauth/accessToken';
   $data = array(
     'grant_type' => 'authorization_code',
-    'client_id' => getenv('LOGIN_CHANNEL_ID'),
-    'client_secret' => getenv('LOGIN_CHANNEL_SECRET'),
+    'client_id' => getenv('1539757035'),
+    'client_secret' => getenv('45d7f699c88dcb8e01fca97fd09a22f1'),
     'code' => $_GET['code'],
     'redirect_uri' => $callback
   );
