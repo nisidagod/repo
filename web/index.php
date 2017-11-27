@@ -1,9 +1,9 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
-
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('xRqejpxMVQK8pUA17z8jMKKDaEKmis3XoYArpP+EkrUrhwO7RSb10BCo3IpfcAJoAAxqcvcwrHH0INAXfrMee0+OePxm2umiq+k4SdS05O3OcLW/FN4RLqhdrTQ6DC5XZvgn3UaUmMYqLUouPfvpUQdB04t89/1O/w1cDnyilFU='));
-$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => getenv('329695d93f519ef5bdc856f2276c7b4d')]);
+$accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
+//$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv(''));
+$bot = new \LINE\LINEBot($accessToken, ['channelSecret' => getenv('329695d93f519ef5bdc856f2276c7b4d')]);
 
 $signature = $_SERVER['HTTP_' . \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
 try {
